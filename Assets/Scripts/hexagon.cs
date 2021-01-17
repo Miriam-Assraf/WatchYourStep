@@ -6,17 +6,23 @@ public class hexagon : MonoBehaviour
 {
     // Start is called before the first frame update
     private int numOfHits;
-    public bool isHexagonTileBroken;
+    public bool isHexTileBroken;
+    public bool isHexOccupied;
     void Start()
     {
         numOfHits = 0;
-        isHexagonTileBroken = false;
+        isHexTileBroken = false;
     }
 
     void hit()
     {
-        --numOfHits;
+        ++numOfHits;
+
+        // deactive hexagon after damage
+
         if (numOfHits == 3)
-            isHexagonTileBroken = true;
+            isHexTileBroken = true;
+
+        // active next hexagon after damage 
     }
 }
